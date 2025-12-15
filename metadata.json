@@ -1,0 +1,7 @@
+{
+  "name": "Gravity Hands",
+  "description": "A minimalist AR physics sandbox. Use your hand to pick up, stack, and throw cubes.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

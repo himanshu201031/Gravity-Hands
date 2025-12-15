@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gravity Hands</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Matter.js for Physics -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --accent: #ccff00;
+      }
+      body {
+        background-color: #050505;
+        font-family: 'Inter', sans-serif;
+        color: #e5e5e5;
+        overflow: hidden;
+      }
+      h1, h2, h3, button, .font-display {
+        font-family: 'Space Grotesk', sans-serif;
+      }
+      
+      /* Utilities */
+      .glass-panel {
+        background: rgba(10, 10, 10, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      /* Animations */
+      @keyframes scanline {
+        0% { transform: translateY(-100%); }
+        100% { transform: translateY(100%); }
+      }
+      .animate-scanline {
+        animation: scanline 4s linear infinite;
+      }
+
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 5px rgba(204, 255, 0, 0.2); }
+        50% { box-shadow: 0 0 15px rgba(204, 255, 0, 0.6); }
+      }
+      .animate-pulse-glow {
+        animation: pulse-glow 2s infinite;
+      }
+      
+      /* Hide scrollbar */
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.1/",
+    "react/": "https://esm.sh/react@^19.2.1/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
